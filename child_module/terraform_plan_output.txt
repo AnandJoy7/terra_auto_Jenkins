@@ -1,0 +1,107 @@
+[0m[1mmodule.vpc.aws_vpc.us-east-1_vpc["vpc2"]: Preparing import... [id=vpc-06c9f2581ee19e3c2][0m
+[0m[1mmodule.vpc.aws_vpc.us-east-1_vpc["vpc2"]: Refreshing state... [id=vpc-06c9f2581ee19e3c2][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.vpc.aws_vpc.us-east-1_vpc["vpc1"][0m will be created
+[0m  [32m+[0m[0m resource "aws_vpc" "us-east-1_vpc" {
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m cidr_block                           = "10.0.0.0/16"
+      [32m+[0m[0m default_network_acl_id               = (known after apply)
+      [32m+[0m[0m default_route_table_id               = (known after apply)
+      [32m+[0m[0m default_security_group_id            = (known after apply)
+      [32m+[0m[0m dhcp_options_id                      = (known after apply)
+      [32m+[0m[0m enable_dns_hostnames                 = true
+      [32m+[0m[0m enable_dns_support                   = true
+      [32m+[0m[0m enable_network_address_usage_metrics = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_tenancy                     = "default"
+      [32m+[0m[0m ipv6_association_id                  = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block                      = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_network_border_group = (known after apply)
+      [32m+[0m[0m main_route_table_id                  = (known after apply)
+      [32m+[0m[0m owner_id                             = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Environment" = "production"
+          [32m+[0m[0m "Name"        = "vpc1"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Environment" = "production"
+          [32m+[0m[0m "Name"        = "vpc1"
+        }
+    }
+
+[1m  # module.vpc.aws_vpc.us-east-1_vpc["vpc2"][0m will be imported
+[0m    resource "aws_vpc" "us-east-1_vpc" {
+        arn                                  = "arn:aws:ec2:us-east-1:637423584491:vpc/vpc-06c9f2581ee19e3c2"
+        assign_generated_ipv6_cidr_block     = false
+        cidr_block                           = "10.0.1.0/24"
+        default_network_acl_id               = "acl-0e26e291063580a6e"
+        default_route_table_id               = "rtb-05315b8dc8228a3b2"
+        default_security_group_id            = "sg-0c8b6d2ce8052a87e"
+        dhcp_options_id                      = "dopt-0b4582e7bce911cb8"
+        enable_dns_hostnames                 = true
+        enable_dns_support                   = true
+        enable_network_address_usage_metrics = false
+        id                                   = "vpc-06c9f2581ee19e3c2"
+        instance_tenancy                     = "default"
+        ipv6_association_id                  = [90mnull[0m[0m
+        ipv6_cidr_block                      = [90mnull[0m[0m
+        ipv6_cidr_block_network_border_group = [90mnull[0m[0m
+        ipv6_ipam_pool_id                    = [90mnull[0m[0m
+        ipv6_netmask_length                  = 0
+        main_route_table_id                  = "rtb-05315b8dc8228a3b2"
+        owner_id                             = "637423584491"
+        tags                                 = {
+            "Name" = "my-default-vpc"
+        }
+        tags_all                             = {
+            "Name" = "my-default-vpc"
+        }
+    }
+
+[1m  # module.vpc.aws_vpc.us-east-1_vpc["vpc3"][0m will be created
+[0m  [32m+[0m[0m resource "aws_vpc" "us-east-1_vpc" {
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m cidr_block                           = "10.2.0.0/16"
+      [32m+[0m[0m default_network_acl_id               = (known after apply)
+      [32m+[0m[0m default_route_table_id               = (known after apply)
+      [32m+[0m[0m default_security_group_id            = (known after apply)
+      [32m+[0m[0m dhcp_options_id                      = (known after apply)
+      [32m+[0m[0m enable_dns_hostnames                 = false
+      [32m+[0m[0m enable_dns_support                   = false
+      [32m+[0m[0m enable_network_address_usage_metrics = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_tenancy                     = "default"
+      [32m+[0m[0m ipv6_association_id                  = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block                      = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_network_border_group = (known after apply)
+      [32m+[0m[0m main_route_table_id                  = (known after apply)
+      [32m+[0m[0m owner_id                             = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Environment" = "staging"
+          [32m+[0m[0m "Name"        = "vpc3"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Environment" = "staging"
+          [32m+[0m[0m "Name"        = "vpc3"
+        }
+    }
+
+[1mPlan:[0m 1 to import, 2 to add, 0 to change, 0 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m vpc_ids = {
+      [32m+[0m[0m vpc1 = (known after apply)
+      [32m+[0m[0m vpc2 = "vpc-06c9f2581ee19e3c2"
+      [32m+[0m[0m vpc3 = (known after apply)
+    }
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
